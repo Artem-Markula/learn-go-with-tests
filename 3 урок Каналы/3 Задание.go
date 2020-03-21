@@ -38,7 +38,8 @@
     }
 
     func main() {
-    work := time.Duration(rand.Intn(9))
+	rand.Seed(time.Now().UnixNano())
+	work := time.Duration(rand.Intn(3))
 
     null := time.Duration(-1)
     second := time.Duration(1)
