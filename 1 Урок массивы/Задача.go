@@ -10,8 +10,8 @@ func twoSum(nums []int, target int)(a [2]int) {
 	for i:=0; i<len(nums); i++{
 	sum[i] = nums[i] + nums[j]
 	if sum[i] == target {
-	a[0] = nums[i]
-	a[1] = nums[j]
+	a[0] = i
+	a[1] = j
 }
 }
 }
@@ -26,4 +26,5 @@ func main() {
 	
 	fmt.Println(twoSum(nums, target))
 }
+
 
