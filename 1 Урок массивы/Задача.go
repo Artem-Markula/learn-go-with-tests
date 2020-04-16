@@ -3,20 +3,21 @@ package main
 import "fmt"
 
 
-func twoSum(nums []int, target int)(a [2]int) {
+func twoSum(nums []int, target int)(f string){
 	sum:= [50]int{}
-	
 	for j:= 1; j < len(nums); j++ {
 	for i:=0; i<len(nums); i++{
 	sum[i] = nums[i] + nums[j]
 	if sum[i] == target {
-	a[0] = i
-	a[1] = j
+	a1 := i
+	a2 := j
+	fmt.Println("Введенная сумма масива найдена, индексы дающие сумму в массиве это ",a1, a2)
+	return ""
 }
 }
 }
 
-return a
+return "Введенная сумма в массиве не найдена"
 }
 
 func main() {
@@ -26,5 +27,4 @@ func main() {
 	
 	fmt.Println(twoSum(nums, target))
 }
-
 
